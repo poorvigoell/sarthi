@@ -156,17 +156,15 @@ export default function Component() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-pink-50 to-purple-200">
+    <div className="min-h-screen bg-white">
       <div className="container mx-auto px-4 py-8">
-        <img src="/logo.png" alt="logo" className="w-40 h-40 mx-auto" />
-        <h2 className="text-3xl font-bold text-center mb-4 text-black-800 font-nunito">SARTHI</h2>
-        <p className="text-center text-purple-600 mb-8">Real-time monitoring for enhanced safety and peace of mind.</p>
+        <h1 className="text-center text-black mb-8">Real-time monitoring for enhanced safety and peace of mind.</h1>
 
         {detectedKeyword && (
           <div className="bg-yellow-100 border-l-4 border-yellow-500 text-yellow-700 p-4 mb-4 rounded-md" role="alert">
             <p className="font-bold">Keyword Detected</p>
             <p>
-              The keyword "<span className="text-red-600 font-bold">{detectedKeyword}</span>" was detected from speech.
+              The keyword "<span className="text-pink-600 font-bold">{detectedKeyword}</span>" was detected from speech.
             </p>
           </div>
         )}
@@ -204,7 +202,7 @@ export default function Component() {
           <button
             onClick={isListening ? stopListening : startListening}
             className={`flex items-center px-4 py-2 rounded-full ${
-              isListening ? 'bg-red-500 hover:bg-red-600' : 'bg-green-500 hover:bg-green-600'
+              isListening ? 'bg-pink-400 hover:bg-pink-500' : 'bg-pink-400 hover:bg-black'
             } text-white font-semibold transition-colors duration-300`}
           >
             <Mic className="w-5 h-5 mr-2" />
